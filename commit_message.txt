@@ -1,15 +1,15 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(setup): Initial commit - Set up neural network training project
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(dependencies): Add requirements.txt with PyTorch dependencies
 
-Initial repository setup establishing the foundation for the neural network training
-techniques project. This commit creates the basic file structure including a README
-with project overview and a .gitignore file with Python/Jupyter patterns.
+Added comprehensive requirements.txt file defining all Python dependencies needed for
+the project including PyTorch, NumPy, Matplotlib, and Jupyter with appropriate version
+constraints for reproducibility.
 
-Every project starts with initialization. This represents the moment a developer creates
-a new repository and sets up the basic file structure before any actual development work.
+After initializing the repository, the next logical step is defining dependencies so the
+development environment can be set up. This allows other developers to replicate the
+environment and ensures consistent behavior across different machines.
 
 Changes:
-- Created README.md with project overview and basic structure
-- Added .gitignore with Python/Jupyter patterns
-- Established project foundation
+- Added requirements.txt with PyTorch, NumPy, Matplotlib, Jupyter
+- Specified version constraints for reproducibility (>=2.0.0 for PyTorch, etc.)
 
-Files: 2 (README.md, .gitignore)
+Files: 3 (+requirements.txt)
