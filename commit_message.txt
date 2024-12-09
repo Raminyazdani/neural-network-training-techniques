@@ -1,15 +1,17 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(dependencies): Add requirements.txt with PyTorch dependencies
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(notebook): Create notebook with project title and introduction
 
-Added comprehensive requirements.txt file defining all Python dependencies needed for
-the project including PyTorch, NumPy, Matplotlib, and Jupyter with appropriate version
-constraints for reproducibility.
+Created the main Jupyter notebook file (batch_normalization_study.ipynb) with a
+professional title and comprehensive introduction explaining the batch normalization
+study and the comparison approach between baseline and BatchNorm networks.
 
-After initializing the repository, the next logical step is defining dependencies so the
-development environment can be set up. This allows other developers to replicate the
-environment and ensures consistent behavior across different machines.
+With dependencies defined, the developer creates the main notebook file and writes the
+introduction. Starting with documentation helps clarify the project goals before diving
+into implementation. This establishes the narrative and purpose of the study.
 
 Changes:
-- Added requirements.txt with PyTorch, NumPy, Matplotlib, Jupyter
-- Specified version constraints for reproducibility (>=2.0.0 for PyTorch, etc.)
+- Created batch_normalization_study.ipynb
+- Added title cell: "Neural Network Training Techniques"
+- Added introduction explaining the batch normalization study
+- Described the comparison approach (baseline vs. BatchNorm)
 
-Files: 3 (+requirements.txt)
+Files: 4 (+batch_normalization_study.ipynb)
