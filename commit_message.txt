@@ -1,17 +1,18 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(notebook): Create notebook with project title and introduction
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(structure): Add section headers and notebook structure
 
-Created the main Jupyter notebook file (batch_normalization_study.ipynb) with a
-professional title and comprehensive introduction explaining the batch normalization
-study and the comparison approach between baseline and BatchNorm networks.
+Added organizational section headers to the notebook creating a clear skeleton for the
+implementation flow. Sections include Setup and Data Loading, Baseline Network, Network
+with Batch Normalization, and Performance Comparison.
 
-With dependencies defined, the developer creates the main notebook file and writes the
-introduction. Starting with documentation helps clarify the project goals before diving
-into implementation. This establishes the narrative and purpose of the study.
+Before writing code, establishing the structure helps organize thoughts and provides a
+roadmap for implementation. This structural planning ensures a logical flow and makes
+the notebook easier to follow. Each section will be filled in subsequent commits.
 
 Changes:
-- Created batch_normalization_study.ipynb
-- Added title cell: "Neural Network Training Techniques"
-- Added introduction explaining the batch normalization study
-- Described the comparison approach (baseline vs. BatchNorm)
+- Added section headers for Setup and Data Loading
+- Added section header for Baseline Network
+- Added section header for Network with Batch Normalization
+- Added section header for Performance Comparison
+- Created skeleton for the notebook flow
 
-Files: 4 (+batch_normalization_study.ipynb)
+Files: 4 (notebook updated with structure)
