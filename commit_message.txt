@@ -1,18 +1,17 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(structure): Add section headers and notebook structure
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(data): Implement FashionMNIST data loading with PyTorch
 
-Added organizational section headers to the notebook creating a clear skeleton for the
-implementation flow. Sections include Setup and Data Loading, Baseline Network, Network
-with Batch Normalization, and Performance Comparison.
+Implemented complete data loading pipeline for the FashionMNIST dataset using PyTorch's
+DataLoader utilities. Added all necessary imports and configured data transformers with
+proper normalization for training and test sets.
 
-Before writing code, establishing the structure helps organize thoughts and provides a
-roadmap for implementation. This structural planning ensures a logical flow and makes
-the notebook easier to follow. Each section will be filled in subsequent commits.
+Before building models, data pipelines must be established. This is a fundamental step
+in any ML project. The data loading must be completed before any model training can
+occur. FashionMNIST is configured for automatic download, eliminating manual setup.
 
 Changes:
-- Added section headers for Setup and Data Loading
-- Added section header for Baseline Network
-- Added section header for Network with Batch Normalization
-- Added section header for Performance Comparison
-- Created skeleton for the notebook flow
+- Added imports (torch, torchvision, torch.nn, torch.nn.functional, matplotlib, numpy)
+- Implemented data transformers (ToTensor, Normalize)
+- Set up training and test dataloaders with batch size 64
+- Configured FashionMNIST dataset for automatic download
 
-Files: 4 (notebook updated with structure)
+Files: 4 (notebook updated with imports and data loading)
