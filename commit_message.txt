@@ -1,17 +1,17 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(data): Implement FashionMNIST data loading with PyTorch
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(model): Implement baseline feed-forward neural network architecture
 
-Implemented complete data loading pipeline for the FashionMNIST dataset using PyTorch's
-DataLoader utilities. Added all necessary imports and configured data transformers with
-proper normalization for training and test sets.
+Defined the baseline NeuralNetwork class inheriting from nn.Module with a three-layer
+feed-forward architecture (784 → 64 → 32 → 10) using ReLU activations. This establishes
+the reference model for comparison against the batch normalization variant.
 
-Before building models, data pipelines must be established. This is a fundamental step
-in any ML project. The data loading must be completed before any model training can
-occur. FashionMNIST is configured for automatic download, eliminating manual setup.
+The core model architecture is implemented first. Starting with the baseline provides a
+reference point for comparison. The class definition is separated from instantiation for
+clarity and follows PyTorch best practices for model definition.
 
 Changes:
-- Added imports (torch, torchvision, torch.nn, torch.nn.functional, matplotlib, numpy)
-- Implemented data transformers (ToTensor, Normalize)
-- Set up training and test dataloaders with batch size 64
-- Configured FashionMNIST dataset for automatic download
+- Defined NeuralNetwork class inheriting from nn.Module
+- Added architecture: Input(784) → Hidden1(64) → Hidden2(32) → Output(10)
+- Implemented three linear layers (fc1, fc2, fc3)
+- Defined forward pass with flatten, ReLU activations
 
-Files: 4 (notebook updated with imports and data loading)
+Files: 4 (notebook updated with network class)
