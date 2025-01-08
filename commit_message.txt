@@ -1,17 +1,17 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(model): Implement baseline feed-forward neural network architecture
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(model): Create baseline network instance and verify architecture
 
-Defined the baseline NeuralNetwork class inheriting from nn.Module with a three-layer
-feed-forward architecture (784 → 64 → 32 → 10) using ReLU activations. This establishes
-the reference model for comparison against the batch normalization variant.
+Instantiated the baseline network model and printed the architecture for verification,
+confirming that layer dimensions and parameter counts are correct before proceeding to
+the training phase.
 
-The core model architecture is implemented first. Starting with the baseline provides a
-reference point for comparison. The class definition is separated from instantiation for
-clarity and follows PyTorch best practices for model definition.
+After defining the class, the developer creates an instance to verify the architecture
+is correct before proceeding to training. This is a natural checkpoint in development
+that catches any architectural issues early. Printing the model summary helps validate
+the expected parameter count and layer structure.
 
 Changes:
-- Defined NeuralNetwork class inheriting from nn.Module
-- Added architecture: Input(784) → Hidden1(64) → Hidden2(32) → Output(10)
-- Implemented three linear layers (fc1, fc2, fc3)
-- Defined forward pass with flatten, ReLU activations
+- Instantiated baseline network: model_baseline = NeuralNetwork()
+- Printed model architecture for verification
+- Confirmed layer dimensions and parameter counts
 
-Files: 4 (notebook updated with network class)
+Files: 4 (notebook updated with network instantiation)
