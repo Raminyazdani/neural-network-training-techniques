@@ -1,17 +1,19 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(model): Create baseline network instance and verify architecture
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(training): Add training loop with SGD optimizer and cross-entropy loss
 
-Instantiated the baseline network model and printed the architecture for verification,
-confirming that layer dimensions and parameter counts are correct before proceeding to
-the training phase.
+Implemented complete training infrastructure including epoch loop, SGD optimizer with
+learning rate 0.001, CrossEntropyLoss, and per-epoch loss and accuracy tracking with
+device configuration for CPU/GPU support.
 
-After defining the class, the developer creates an instance to verify the architecture
-is correct before proceeding to training. This is a natural checkpoint in development
-that catches any architectural issues early. Printing the model summary helps validate
-the expected parameter count and layer structure.
+With the model defined and instantiated, the training infrastructure is needed to
+actually train the network. The training loop is implemented before evaluation to
+establish the training process. This follows standard PyTorch training patterns with
+proper device handling and metric tracking.
 
 Changes:
-- Instantiated baseline network: model_baseline = NeuralNetwork()
-- Printed model architecture for verification
-- Confirmed layer dimensions and parameter counts
+- Implemented training function with epoch loop
+- Added SGD optimizer with learning rate 0.001
+- Configured CrossEntropyLoss
+- Added per-epoch loss and accuracy tracking
+- Set device configuration (CPU/GPU)
 
-Files: 4 (notebook updated with network instantiation)
+Files: 4 (notebook updated with training loop)
