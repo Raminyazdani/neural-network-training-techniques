@@ -1,19 +1,18 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(training): Add training loop with SGD optimizer and cross-entropy loss
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(evaluation): Implement test set evaluation and baseline training
 
-Implemented complete training infrastructure including epoch loop, SGD optimizer with
-learning rate 0.001, CrossEntropyLoss, and per-epoch loss and accuracy tracking with
-device configuration for CPU/GPU support.
+Added evaluation function for computing test set accuracy with proper no_grad context,
+then trained the baseline network for 5 epochs and recorded the baseline accuracy
+results for later comparison.
 
-With the model defined and instantiated, the training infrastructure is needed to
-actually train the network. The training loop is implemented before evaluation to
-establish the training process. This follows standard PyTorch training patterns with
-proper device handling and metric tracking.
+After implementing training, evaluation is needed to measure performance. Training the
+baseline first establishes a reference point before implementing the BatchNorm variant.
+The evaluation function uses torch.no_grad() for efficiency and follows PyTorch best
+practices for inference.
 
 Changes:
-- Implemented training function with epoch loop
-- Added SGD optimizer with learning rate 0.001
-- Configured CrossEntropyLoss
-- Added per-epoch loss and accuracy tracking
-- Set device configuration (CPU/GPU)
+- Added evaluation function for test accuracy
+- Implemented test loop with no_grad context
+- Trained baseline network for 5 epochs
+- Recorded baseline accuracy results
 
-Files: 4 (notebook updated with training loop)
+Files: 4 (notebook updated with evaluation and baseline results)
