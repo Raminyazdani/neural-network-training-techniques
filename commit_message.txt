@@ -1,18 +1,25 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(evaluation): Implement test set evaluation and baseline training
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(batchnorm): Implement batch normalization enhanced network
 
-Added evaluation function for computing test set accuracy with proper no_grad context,
-then trained the baseline network for 5 epochs and recorded the baseline accuracy
-results for later comparison.
+Added NeuralNetworkWithBatchNorm class to implement the experimental batch normalization
+enhancement. MISTAKE: Placed BatchNorm1d layers BEFORE Linear layers instead of after,
+which is incorrect architecture that defeats the purpose of batch normalization.
 
-After implementing training, evaluation is needed to measure performance. Training the
-baseline first establishes a reference point before implementing the BatchNorm variant.
-The evaluation function uses torch.no_grad() for efficiency and follows PyTorch best
-practices for inference.
+After establishing baseline functionality, the developer implements the experimental
+enhancement. However, this commit contains a realistic mistake - the BatchNorm layers
+are positioned incorrectly in the forward pass. This would be caught during code review
+or when comparing against PyTorch best practices.
+
+WHY THIS IS WRONG:
+- BatchNorm should normalize the linear transformation outputs, not the inputs
+- Current order means bn1 normalizes raw input features (already normalized)
+- This defeats the purpose of batch normalization in addressing internal covariate shift
+- The order should be: Linear → BatchNorm → ReLU, not BN → Linear → ReLU
 
 Changes:
-- Added evaluation function for test accuracy
-- Implemented test loop with no_grad context
-- Trained baseline network for 5 epochs
-- Recorded baseline accuracy results
+- Added NeuralNetworkWithBatchNorm class
+- Incorrectly placed BatchNorm1d layers BEFORE Linear layers
+- Forward pass: BN → Linear → ReLU (incorrect order)
 
-Files: 4 (notebook updated with evaluation and baseline results)
+Files: 4 (notebook updated with incorrect BatchNorm network)
+
+NOTE: This mistake will be corrected in the next commit (hotfix).
