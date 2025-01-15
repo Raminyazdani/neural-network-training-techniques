@@ -1,25 +1,28 @@
-Ramin Yazdani | Neural Network Training Techniques | main | WIP(batchnorm): Implement batch normalization enhanced network
+Ramin Yazdani | Neural Network Training Techniques | main | WIP(hotfix): Fix - Correct BatchNorm layer positioning after linear layers
 
-Added NeuralNetworkWithBatchNorm class to implement the experimental batch normalization
-enhancement. MISTAKE: Placed BatchNorm1d layers BEFORE Linear layers instead of after,
-which is incorrect architecture that defeats the purpose of batch normalization.
+HOTFIX: Corrected the BatchNorm layer positioning to follow best practices. BatchNorm
+layers now appear AFTER linear layers and BEFORE activation functions, which is the
+proper order for addressing internal covariate shift.
 
-After establishing baseline functionality, the developer implements the experimental
-enhancement. However, this commit contains a realistic mistake - the BatchNorm layers
-are positioned incorrectly in the forward pass. This would be caught during code review
-or when comparing against PyTorch best practices.
+During code review, the developer noticed the BatchNorm placement was incorrect. This
+hotfix corrects the architecture to follow best practices: apply batch normalization to
+the output of linear transformations, before the activation function. This is the
+standard pattern in modern deep learning architectures.
 
-WHY THIS IS WRONG:
-- BatchNorm should normalize the linear transformation outputs, not the inputs
-- Current order means bn1 normalizes raw input features (already normalized)
-- This defeats the purpose of batch normalization in addressing internal covariate shift
-- The order should be: Linear → BatchNorm → ReLU, not BN → Linear → ReLU
+HOW NOTICED:
+- Code review and reference to PyTorch documentation on proper BatchNorm usage
+- Comparison with established architectures (ResNet, VGG, etc.)
+- Understanding that BatchNorm normalizes activations, not raw inputs
+
+RESOLUTION:
+- Restructured the forward pass to apply BatchNorm after each linear layer but before
+  the activation function
+- Corrected order: Linear → BatchNorm → ReLU
 
 Changes:
-- Added NeuralNetworkWithBatchNorm class
-- Incorrectly placed BatchNorm1d layers BEFORE Linear layers
-- Forward pass: BN → Linear → ReLU (incorrect order)
+- FIXED BatchNorm layer positioning
+- Corrected order: Linear → BatchNorm → ReLU (instead of BN → Linear → ReLU)
+- Updated forward pass: flatten → fc1 → bn1 → ReLU → fc2 → bn2 → ReLU → fc3 → output
+- Added network instantiation
 
-Files: 4 (notebook updated with incorrect BatchNorm network)
-
-NOTE: This mistake will be corrected in the next commit (hotfix).
+Files: 4 (notebook fixed with correct BatchNorm network)
