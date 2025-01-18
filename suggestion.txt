@@ -1,0 +1,21 @@
+# Portfolio Readiness Suggestions Ledger
+# Format: TYPE	FILE	LOCATOR	BEFORE_SNIPPET	PROPOSED_CHANGE	RATIONALE	STATUS
+
+RENAME	Assignment_6.ipynb	filename	Assignment_6.ipynb	batch_normalization_study.ipynb	Remove academic naming; reflect technical content	STATUS=APPLIED
+TRACE	Assignment_6.ipynb	cell[0] (markdown)	# NNTI Assignment 6\n\nName 1: <br>\nStudent id 1: <br>\n...	# Neural Network Training Techniques\n\nBatch Normalization Study	Remove assignment header and student ID fields	STATUS=APPLIED
+TRACE	Assignment_6.ipynb	cell[0] (markdown)	**Instructions:**\n- Read each question carefully...	[REMOVE ENTIRE INSTRUCTIONS SECTION]	Remove submission instructions	STATUS=APPLIED
+TRACE	Assignment_6.ipynb	cell[1] (markdown)	In this exercise you will again construct	In this study we construct	Change from assignment to professional framing	STATUS=APPLIED
+TRACE	Assignment_6.ipynb	cell[2] (markdown)	### 1. Baseline Network (1 point)	### Baseline Network	Remove task numbering and point values	STATUS=APPLIED
+TRACE	Assignment_6.ipynb	cell[2] (markdown)	Your task is to construct a feed forward neural network	We construct a feed-forward neural network	Change from assignment to descriptive framing	STATUS=APPLIED
+TRACE	Assignment_6.ipynb	cell[8] (markdown)	### 2. Network with Batch Normalization (0.5 points)	### Network with Batch Normalization	Remove task numbering and point values	STATUS=APPLIED
+TRACE	Assignment_6.ipynb	cell[11] (markdown)	### 3. Plotting the Performances (0.25 points)	### Performance Comparison	Remove task numbering and point values	STATUS=APPLIED
+TRACE	Assignment_6.ipynb	cell[11] (markdown)	**discuss what you observe**	Analysis of results	Change from assignment prompt to professional heading	STATUS=APPLIED
+TRACE	Assignment_6.ipynb	cell[13] (markdown)	**Your Answer:**	**Analysis:**	Change from assignment response to professional presentation	STATUS=APPLIED
+TRACE	README.md	line 1	# NNTI Assignment 6	# Neural Network Training Techniques	Remove assignment title	STATUS=APPLIED
+TRACE	README.md	line 3	**Project Type:** University Assignment/Task	[REMOVE LINE]	Remove academic classification	STATUS=APPLIED
+TRACE	README.md	line 8	This is Assignment 6 for the Neural Networks and Their Implementation (NNTI) course. The assignment covers...	This project explores neural network training optimization techniques, specifically demonstrating the impact of batch normalization on convergence and performance.	Reframe from assignment to professional description	STATUS=APPLIED
+TRACE	README.md	lines 21-23	Submission_7_-_7072982_Syed_Rumman_Ali/\n├── Assignment_6.ipynb...	neural-network-training-techniques/\n├── batch_normalization_study.ipynb...	Update folder structure to reflect professional naming	STATUS=APPLIED
+TRACE	README.md	line 41	cd Submission_7_-_7072982_Syed_Rumman_Ali	cd neural-network-training-techniques	Update navigation command	STATUS=APPLIED
+TRACE	README.md	line 47	jupyter notebook Assignment_6.ipynb	jupyter notebook batch_normalization_study.ipynb	Update filename reference	STATUS=APPLIED
+DOC	README.md	entire file	[CURRENT STRUCTURE]	[PORTFOLIO-GRADE STRUCTURE]	Complete rewrite to align with project_identity.md and professional standards	STATUS=APPLIED
+STRUCTURE	.gitignore	missing file	N/A	Create .gitignore with Python/Jupyter patterns	Add proper gitignore for Python project	STATUS=APPLIED
