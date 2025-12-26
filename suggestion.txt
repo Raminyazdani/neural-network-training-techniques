@@ -1,0 +1,3 @@
+# Portfolio Readiness Suggestions Ledger
+# Format: TYPE	FILE	LOCATOR	BEFORE_SNIPPET	PROPOSED_CHANGE	RATIONALE	STATUS
+

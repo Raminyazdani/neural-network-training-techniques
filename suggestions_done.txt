@@ -1,0 +1,3 @@
+# Applied Changes Ledger
+# Format: FILE	LOCATOR	BEFORE_SNIPPET	AFTER_SNIPPET	NOTES
+
