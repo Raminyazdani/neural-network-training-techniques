@@ -126,3 +126,63 @@ All findings documented in `suggestion.txt` with:
 - All marked STATUS=PENDING
 
 ---
+
+## PHASE 3 — Portfolio-Readiness Changes
+
+### 3.1 Changes Applied
+
+#### 3.1.1 .gitignore Created
+- Created comprehensive .gitignore with Python/Jupyter patterns
+- Includes: __pycache__, .ipynb_checkpoints, .env, IDE files, data files, model checkpoints
+- Prevents accidental commits of generated files and credentials
+
+#### 3.1.2 README.md Rewritten (Portfolio-Grade)
+- Replaced academic README with professional documentation
+- New sections:
+  - Overview with problem statement and approach
+  - Comprehensive tech stack listing
+  - Repository structure
+  - Detailed setup instructions (cross-platform)
+  - Usage guide with step-by-step notebook execution
+  - Data section explaining FashionMNIST auto-download
+  - Outputs description with expected results
+  - Reproducibility notes
+  - Extensive troubleshooting section
+  - Key findings summary
+  - Further exploration suggestions
+  - Proper acknowledgments
+- All references to "Assignment_6.ipynb" updated to "batch_normalization_study.ipynb"
+- All references to "Submission_7_-_7072982_Syed_Rumman_Ali" folder removed
+- Aligned with project_identity.md
+
+#### 3.1.3 Notebook Renamed and Cleaned
+- **Filename:** Assignment_6.ipynb → batch_normalization_study.ipynb
+- **Cell 0 (markdown):** 
+  - Removed: "NNTI Assignment 6" header, student ID fields, submission instructions
+  - Added: Professional title "Neural Network Training Techniques", descriptive introduction
+- **Cell 1 (markdown):**
+  - Changed: "In this exercise" → "In this study"
+- **Cell 2 (markdown):**
+  - Removed: "### 1. Baseline Network (1 point)"
+  - Added: "### Baseline Network"
+  - Changed: "Your task is to construct" → "We construct"
+  - Changed: assignment instructions to descriptive documentation
+- **Cell 8 (markdown):**
+  - Removed: "### 2. Network with Batch Normalization (0.5 points)"
+  - Added: "### Network with Batch Normalization"
+- **Cell 11 (markdown):**
+  - Removed: "### 3. Plotting the Performances (0.25 points)"
+  - Added: "### Performance Comparison"
+  - Changed: "discuss what you observe" → "analyze the results"
+- **Cell 13 (markdown):**
+  - Changed: "**Your Answer:**" → "**Analysis:**"
+  - Reformatted observations to professional presentation style
+
+### 3.2 Ledger Updates
+- Updated suggestion.txt: All 18 entries marked STATUS=APPLIED
+- Updated suggestions_done.txt: Added 11 detailed entries with before/after snippets
+
+### 3.3 Verification Strategy
+Next step: Smoke test the notebook to ensure it still runs correctly
+
+---
