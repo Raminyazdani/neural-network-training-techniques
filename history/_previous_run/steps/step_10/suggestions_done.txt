@@ -1,0 +1,14 @@
+# Applied Changes Ledger
+# Format: FILE	LOCATOR	BEFORE_SNIPPET	AFTER_SNIPPET	NOTES
+
+.gitignore	new file	N/A	[Python/Jupyter patterns with __pycache__, .ipynb_checkpoints, etc.]	Created comprehensive .gitignore for Python/Jupyter project
+Assignment_6.ipynb	filename	Assignment_6.ipynb	batch_normalization_study.ipynb	Renamed file to reflect content and remove academic naming
+batch_normalization_study.ipynb	cell[0] (markdown)	# NNTI Assignment 6\n\nName 1: <br>\nStudent id 1: <br>...	# Neural Network Training Techniques\n\n## Batch Normalization Study\n\nThis notebook demonstrates...	Removed assignment header and student ID fields; added professional introduction
+batch_normalization_study.ipynb	cell[1] (markdown)	In this exercise you will again construct	In this study we construct	Changed from assignment to professional framing
+batch_normalization_study.ipynb	cell[2] (markdown)	### 1. Baseline Network (1 point)\nYour task is to construct	### Baseline Network\nWe construct	Removed task numbering, point values, and assignment language
+batch_normalization_study.ipynb	cell[8] (markdown)	### 2. Network with Batch Normalization (0.5 points)	### Network with Batch Normalization	Removed task numbering and point values
+batch_normalization_study.ipynb	cell[11] (markdown)	### 3. Plotting the Performances (0.25 points)\n**discuss what you observe**	### Performance Comparison\nWe plot the accuracies...and analyze the results	Removed task numbering, points, and assignment prompt
+batch_normalization_study.ipynb	cell[13] (markdown)	**Your Answer:**\n\nObservations:	**Analysis:**\n\n**Observations:**	Changed from assignment response format to professional presentation
+README.md	entire file	# NNTI Assignment 6\n\n**Project Type:** University Assignment/Task...	# Neural Network Training Techniques\n\n> Exploring batch normalization...	Complete rewrite to portfolio-grade with professional framing, comprehensive sections, aligned with project_identity.md
+README.md	line 21	Submission_7_-_7072982_Syed_Rumman_Ali/	neural-network-training-techniques/	Updated folder structure in documentation
+README.md	line 47	jupyter notebook Assignment_6.ipynb	jupyter notebook batch_normalization_study.ipynb	Updated notebook filename in usage instructions
