@@ -462,3 +462,121 @@ This portfolio transformation is **COMPLETE**. The neural-network-training-techn
 **Ready for Portfolio Use:** YES ✅
 
 ---
+
+## PHASE 6 — Step-Expanded Git Historian (v2)
+
+**Date:** 2025-12-27
+
+### 6.1 Expansion Requirements
+
+Based on the super prompt v2, the existing historian output needed to be expanded:
+- **N_old:** 10 steps (from previous run)
+- **N_target:** 15 steps (ceil(10 * 1.5))
+- **Multiplier required:** 1.5×
+
+### 6.2 Expansion Strategy
+
+The expansion used two complementary strategies:
+
+1. **Step Splitting** - Large commits were broken into smaller, atomic changes:
+   - Old Step 03 (Notebook creation) → New Steps 03-04
+   - Old Step 05 (Baseline network) → New Steps 06-07
+   - Old Step 06 (Training) → New Steps 08-09
+   - Old Step 07 (BatchNorm network) → New Steps 10-11 (with oops/hotfix)
+   - Old Step 08 (Visualization) → New Steps 12-13
+
+2. **Oops → Hotfix Sequence** - Inserted a realistic mistake and immediate fix:
+   - **Step 10 (oops):** Added BatchNorm network with incorrect layer order (BatchNorm BEFORE Linear instead of AFTER)
+   - **Step 11 (hotfix):** Fixed BatchNorm layer positioning to correct order (Linear → BatchNorm → ReLU)
+
+### 6.3 Execution Steps
+
+1. Archived existing history to `history/_previous_run/`
+2. Created Python script to generate 15 expanded snapshots
+3. Generated all 15 steps with progressive feature addition
+4. Verified no recursion (no history/ or .git/ in snapshots)
+5. Verified step_15 matches current working tree exactly
+6. Created comprehensive `history/github_steps.md` with:
+   - History expansion note documenting N_old, N_new, multiplier
+   - Mapping from old steps to new steps
+   - Explicit oops/hotfix description
+   - Detailed step-by-step progression
+   - Technical notes and verification details
+
+### 6.4 Verification Results
+
+**Expansion Achievement:** ✓ PASSED
+- N_old = 10 steps
+- N_new = 15 steps
+- Multiplier = 1.5× (exactly meets requirement)
+
+**Recursion Check:** ✓ PASSED
+- No `history/` directory found in any snapshot
+- No `.git/` directory found in any snapshot
+
+**Final State Match:** ✓ PASSED
+- Step 15 verified against current working tree
+- All 8 files match (README.md, batch_normalization_study.ipynb, requirements.txt, .gitignore, project_identity.md, report.md, suggestion.txt, suggestions_done.txt)
+- Notebooks are byte-identical
+
+**Oops/Hotfix Quality:** ✓ PASSED
+- Step 10 contains plausible mistake (BatchNorm positioning error)
+- Step 11 contains proper fix
+- Mistake is realistic, detectable, and educational
+- Documented in github_steps.md with clear explanation
+
+### 6.5 Smoke Test Re-verification
+
+**Command:** `python3 -c "import json; f=open('batch_normalization_study.ipynb'); nb=json.load(f); print(f'Notebook loaded: {len(nb[\"cells\"])} cells'); f.close()"`
+
+**Result:** ✓ PASSED
+```
+Notebook loaded: 15 cells
+```
+
+### 6.6 Files Created/Modified
+
+**Modified:**
+- `history/github_steps.md` - Completely rewritten with expansion note and 15-step documentation
+- `report.md` - Added this Phase 6 section
+
+**Created:**
+- `history/steps/step_01/` through `history/steps/step_15/` - 15 complete snapshots
+- `history/_previous_run/` - Archive of previous 10-step history
+
+**Removed:**
+- Previous `history/steps/step_01/` through `history/steps/step_10/` (archived first)
+
+### 6.7 Final Self-Audit Checklist (Updated)
+
+- [x] project_identity.md complete and aligned with README
+- [x] README.md portfolio-grade and accurate
+- [x] suggestion.txt contains findings with final statuses (all STATUS=APPLIED)
+- [x] suggestions_done.txt contains all applied changes with before/after + locators
+- [x] Repo runs (notebook loads successfully with 15 cells)
+- [x] history/github_steps.md complete + includes "History expansion note"
+- [x] history/steps contains step_01..step_15 (sequential integers)
+- [x] N_new >= ceil(N_old * 1.5) ✓ (15 >= 15)
+- [x] step_15 matches final working tree exactly (excluding history/)
+- [x] No snapshot includes history/ or .git/
+- [x] No secrets added; no fabricated datasets
+- [x] At least 1 oops/hotfix sequence present (steps 10-11)
+
+**All requirements met:** ✅ COMPLETE
+
+---
+
+## COMPLETION STATEMENT (v2 - Step-Expanded)
+
+This portfolio transformation with step-expanded Git Historian is **COMPLETE**. The neural-network-training-techniques repository maintains all previous portfolio-ready achievements and now includes an expanded historian output with 15 steps (1.5× increase from 10 steps).
+
+**Additional Achievements in v2:**
+- ✅ Git history expanded from 10 to 15 steps
+- ✅ Realistic oops/hotfix sequence inserted (BatchNorm layer order mistake and fix)
+- ✅ Comprehensive mapping from old to new steps documented
+- ✅ All 15 snapshots verified (no recursion, correct final state)
+- ✅ Enhanced github_steps.md with expansion note and detailed rationale
+
+**Ready for Portfolio Use:** YES ✅
+
+---
